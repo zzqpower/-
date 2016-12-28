@@ -373,7 +373,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\BLUETOOTH</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\BLUETOOTH;..\HARDWARE\DSP;..\HARDWARE\MUSIC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -445,6 +445,16 @@
               <FileName>bluetooth.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\BLUETOOTH\bluetooth.c</FilePath>
+            </File>
+            <File>
+              <FileName>cr4_fft_64_stm32.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\HARDWARE\DSP\cr4_fft_64_stm32.s</FilePath>
+            </File>
+            <File>
+              <FileName>Music.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\MUSIC\Music.c</FilePath>
             </File>
           </Files>
         </Group>

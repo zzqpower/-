@@ -22,28 +22,105 @@ Dialog DLL:      TCM.DLL V1.14.5.0
  
 <h2>Project:</h2>
 C:\Users\Administrator\Desktop\音乐广州塔\程序\USER\音乐广州塔.uvprojx
-Project File Date:  12/24/2016
+Project File Date:  12/28/2016
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 (build 20)', folder: 'd:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
+compiling main.c...
+..\SYSTEM\sys\sys.h(3): error:  #5: cannot open source input file "stm32f/10x.h": No such file or directory
+  #include "stm32f/10x.h"
+main.c: 0 warnings, 1 error
+compiling led.c...
+..\SYSTEM\sys\sys.h(3): error:  #5: cannot open source input file "stm32f/10x.h": No such file or directory
+  #include "stm32f/10x.h"
+..\HARDWARE\LED\led.c: 0 warnings, 1 error
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling delay.c...
+..\SYSTEM\sys\sys.h(3): error:  #5: cannot open source input file "stm32f/10x.h": No such file or directory
+  #include "stm32f/10x.h"
+..\SYSTEM\delay\delay.c: 0 warnings, 1 error
 compiling bluetooth.c...
-..\HARDWARE\BLUETOOTH\bluetooth.c(1): warning:  #1-D: last line of file ends without a newline
-  #include "bluetooth.h"
-..\HARDWARE\BLUETOOTH\bluetooth.h(4): warning:  #1-D: last line of file ends without a newline
+..\HARDWARE\BLUETOOTH\bluetooth.h(7): warning:  #1-D: last line of file ends without a newline
   #endif	 
-..\HARDWARE\BLUETOOTH\bluetooth.c: 2 warnings, 0 errors
-linking...
-Program Size: Code=4884 RO-data=336 RW-data=52 ZI-data=1868  
-FromELF: creating hex file...
-"..\OBJ\LED.axf" - 0 Error(s), 2 Warning(s).
+..\SYSTEM\sys\sys.h(3): error:  #5: cannot open source input file "stm32f/10x.h": No such file or directory
+  #include "stm32f/10x.h"
+..\HARDWARE\BLUETOOTH\bluetooth.c: 1 warning, 1 error
+compiling Music.c...
+..\HARDWARE\MUSIC\Music.c(5): error:  #20: identifier "ADC_InitTypeDef" is undefined
+  	ADC_InitTypeDef ADC_InitStructure; 
+..\HARDWARE\MUSIC\Music.c(6): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+  	GPIO_InitTypeDef GPIO_InitStructure;
+..\HARDWARE\MUSIC\Music.c(8): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB |RCC_APB2Periph_ADC1	, ENABLE );	  //使??ADC1通??时??
+..\HARDWARE\MUSIC\Music.c(8): error:  #20: identifier "RCC_APB2Periph_GPIOB" is undefined
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB |RCC_APB2Periph_ADC1	, ENABLE );	  //使??ADC1通??时??
+..\HARDWARE\MUSIC\Music.c(8): error:  #20: identifier "RCC_APB2Periph_ADC1" is undefined
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB |RCC_APB2Periph_ADC1	, ENABLE );	  //使??ADC1通??时??
+..\HARDWARE\MUSIC\Music.c(8): error:  #20: identifier "ENABLE" is undefined
+  	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB |RCC_APB2Periph_ADC1	, ENABLE );	  //使??ADC1通??时??
+..\HARDWARE\MUSIC\Music.c(11): warning:  #223-D: function "RCC_ADCCLKConfig" declared implicitly
+  	RCC_ADCCLKConfig(RCC_PCLK2_Div6);   //????ADC??频????6 72M/6=12,ADC?畲?时?洳??艹?14M
+..\HARDWARE\MUSIC\Music.c(11): error:  #20: identifier "RCC_PCLK2_Div6" is undefined
+  	RCC_ADCCLKConfig(RCC_PCLK2_Div6);   //????ADC??频????6 72M/6=12,ADC?畲?时?洳??艹?14M
+..\HARDWARE\MUSIC\Music.c(14): error:  #20: identifier "GPIO_Pin_0" is undefined
+  	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+..\HARDWARE\MUSIC\Music.c(15): error:  #20: identifier "GPIO_Mode_AIN" is undefined
+  	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;		//模????????
+..\HARDWARE\MUSIC\Music.c(16): warning:  #223-D: function "GPIO_Init" declared implicitly
+  	GPIO_Init(GPIOB, &GPIO_InitStructure);	
+..\HARDWARE\MUSIC\Music.c(16): error:  #20: identifier "GPIOB" is undefined
+  	GPIO_Init(GPIOB, &GPIO_InitStructure);	
+..\HARDWARE\MUSIC\Music.c(18): warning:  #223-D: function "ADC_DeInit" declared implicitly
+  	ADC_DeInit(ADC1);  //复位ADC1,将???? ADC1 ??全部?拇???????为缺省值
+..\HARDWARE\MUSIC\Music.c(18): error:  #20: identifier "ADC1" is undefined
+  	ADC_DeInit(ADC1);  //复位ADC1,将???? ADC1 ??全部?拇???????为缺省值
+..\HARDWARE\MUSIC\Music.c(20): error:  #20: identifier "ADC_Mode_Independent" is undefined
+  	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;	//ADC工??模式:ADC1??ADC2工???诙?立模式
+..\HARDWARE\MUSIC\Music.c(21): error:  #20: identifier "DISABLE" is undefined
+  	ADC_InitStructure.ADC_ScanConvMode = DISABLE;	//模??转换工???诘?通??模式
+..\HARDWARE\MUSIC\Music.c(23): error:  #20: identifier "ADC_ExternalTrigConv_None" is undefined
+  	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;	//转换???砑????獠?触发?舳?
+..\HARDWARE\MUSIC\Music.c(24): error:  #20: identifier "ADC_DataAlign_Right" is undefined
+  	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;	//ADC???叶???
+..\HARDWARE\MUSIC\Music.c(26): warning:  #223-D: function "ADC_Init" declared implicitly
+  	ADC_Init(ADC1, &ADC_InitStructure);	//??ADC_InitStruct??指定?牟???始化????ADCx?募拇???   
+..\HARDWARE\MUSIC\Music.c(29): warning:  #223-D: function "ADC_Cmd" declared implicitly
+  	ADC_Cmd(ADC1, ENABLE);	//使??指定??ADC1
+..\HARDWARE\MUSIC\Music.c(31): warning:  #223-D: function "ADC_ResetCalibration" declared implicitly
+  	ADC_ResetCalibration(ADC1);	//使?芨?位校准  
+..\HARDWARE\MUSIC\Music.c(33): warning:  #223-D: function "ADC_GetResetCalibrationStatus" declared implicitly
+  	while(ADC_GetResetCalibrationStatus(ADC1));	//?却?位校准????
+..\HARDWARE\MUSIC\Music.c(35): warning:  #223-D: function "ADC_StartCalibration" declared implicitly
+  	ADC_StartCalibration(ADC1);	 //开??AD校准
+..\HARDWARE\MUSIC\Music.c(37): warning:  #223-D: function "ADC_GetCalibrationStatus" declared implicitly
+  	while(ADC_GetCalibrationStatus(ADC1));	 //?却?校准????
+..\HARDWARE\MUSIC\Music.c(41): warning:  #1-D: last line of file ends without a newline
+  }				  
+..\HARDWARE\MUSIC\Music.c: 11 warnings, 14 errors
+compiling sys.c...
+..\SYSTEM\sys\sys.h(3): error:  #5: cannot open source input file "stm32f/10x.h": No such file or directory
+  #include "stm32f/10x.h"
+..\SYSTEM\sys\sys.c: 0 warnings, 1 error
+compiling usart.c...
+..\SYSTEM\sys\sys.h(3): error:  #5: cannot open source input file "stm32f/10x.h": No such file or directory
+  #include "stm32f/10x.h"
+..\SYSTEM\usart\usart.c: 0 warnings, 1 error
+compiling core_cm3.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling misc.c...
+"..\OBJ\LED.axf" - 20 Error(s), 12 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   C:\Users\Administrator\Desktop\音乐广州塔\程序\USER\RTE
   d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Target not created.
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>
